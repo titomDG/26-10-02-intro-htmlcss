@@ -8,7 +8,14 @@
         html {
             font-family: sans-serif;
             max-width: 400px;
-            background-image: repeating-linear-gradient(to bottom, #fAf, #fff, #fff, #fff, #faf);
+            background-color: #faf;
+            animation: bgscan linear infinite 1s;
+        }
+        @keyframes bgscan {
+            0% { background-color: #faf; }
+            33% { background-color: #fff; }
+            66% { background-color: #faf; }
+            100% { background-color: #fff; }
         }
         h1 {
             color: blue;
@@ -24,8 +31,7 @@
             color: #333;
             text-align: center;
             transition: 500ms;
-            animation: shadow infinite 5s;
-            animation-timing-function: ease-out;
+            animation: shadow ease-out infinite 5s;
         }
         h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, strong:hover, a:hover {
             color: #0f0;
@@ -55,8 +61,7 @@
             33% { transform: translate(-1px, 2px) rotate(-3deg) }
             66% { transform: translate(1px, -2px) rotate(5deg) }
             100% { transform: translate(1px, 1px) rotate(-2deg) }
-            }
-        
+        }
     </style>
 </head>
 <body>
