@@ -5,10 +5,10 @@
     <meta name="portfolaeoum" content="width=device-width, initial-scale=1.0">
     <title>portfoliumm</title>
     <style>
-        html, body {
+        html {
             font-family: sans-serif;
-            background-color: #f0f0f0;
             max-width: 400px;
+            background-image: repeating-linear-gradient(to bottom, #fAf, #fff, #fff, #fff, #faf);
         }
         h1 {
             color: blue;
@@ -25,6 +25,7 @@
             text-align: center;
             transition: 500ms;
             animation: shadow infinite 5s;
+            animation-timing-function: ease-out;
         }
         h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, strong:hover, a:hover {
             color: #0f0;
@@ -45,15 +46,15 @@
             animation: shake infinite 0.5s;
         }
         @keyframes shadow {
-            0% { text-shadow: 0px 0px blue}
-            22% { text-shadow: 10px 10px red}
-            100% { text-shadow: 0px 0px blue}
+            0% { text-shadow: 0px 0px blue; transform: rotate(-3deg) }
+            22% { text-shadow: 10px 10px red; transform: rotate(3deg) }
+            100% { text-shadow: 0px 0px blue; transform: rotate(-3deg) }
         }
         @keyframes shake {
-            0% { transform: translate(1px, 1px) rotate(-2deg); }
-            33% { transform: translate(-1px, 2px) rotate(-3deg); font-size: 12px; }
-            66% { transform: translate(1px, -2px) rotate(5deg); font-size: 32px; }
-            100% { transform: translate(1px, 1px) rotate(-2deg); }
+            0% { transform: translate(1px, 1px) rotate(-2deg) }
+            33% { transform: translate(-1px, 2px) rotate(-3deg) }
+            66% { transform: translate(1px, -2px) rotate(5deg) }
+            100% { transform: translate(1px, 1px) rotate(-2deg) }
             }
         
     </style>
