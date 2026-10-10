@@ -5,19 +5,25 @@
     <meta name="portfolaeoum" content="width=device-width, initial-scale=1.0">
     <title>portfoliumm</title>
     <style>
+        @import url(https://fonts.bunny.net/css?family=coral-pixels:400|ibm-plex-serif:400);
         html {
-            font-family: sans-serif;
-            max-width: 400px;
-            background-color: #faf;
-            animation: bgscan linear infinite 1s;
+            margin: 0;
+            padding: 0;
+            font-family: 'Coral Pixels', display;
+            /* animation: bgscan linear infinite 1s; */
+            /* background-image: url("wp1.png"); */
+            background-color: #eeedff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         @keyframes bgscan {
             0% { background-color: #faf; }
             33% { background-color: #fff; }
-            66% { background-color: #faf; }
-            100% { background-color: #fff; }
+            100% { background-color: #0f0; }
         }
         h1 {
+            font-size: 42px;
             color: blue;
             text-align: center;
             margin-top: 50px;
@@ -39,17 +45,26 @@
             animation: shake infinite 0.05s;
         }
         p, strong {
+            font-family: 'IBM Plex Serif', serif;
             /* text-align: center; */
             color: #666;
             transition: 500ms;
+            animation: idleshadow infinite 10s;
         }
-        .card {max-width: 400px;}
+        .card {
+            max-width: 512px;
+        }
         a {
             text-decoration: none;
             transition: 150ms;
         }
         a:hover {
             animation: shake infinite 0.5s;
+        }
+        @keyframes idleshadow {
+            0% { text-shadow: 0px 0px blue }
+            22% { text-shadow: 2px 2px greenyellow}
+            100% { text-shadow: 0px 0px blue }
         }
         @keyframes shadow {
             0% { text-shadow: 0px 0px blue; transform: rotate(-3deg) }
@@ -62,11 +77,41 @@
             66% { transform: translate(1px, -2px) rotate(5deg) }
             100% { transform: translate(1px, 1px) rotate(-2deg) }
         }
+        li {
+            margin: 12px;
+        }
+        .button {
+            padding: 12px;
+            border-radius: 999px;
+            background-color: #fff;
+            transition: 50ms;
+        }
+        .button:hover {
+            animation: buttonshadow infinite 5s;
+        }
+        @keyframes buttonshadow {
+            0% { filter: drop-shadow(2px 2px red) }
+            22% { filter: drop-shadow(2px 2px red) }
+            100% { filter: drop-shadow(2px 2px red) }
+        }
     </style>
 </head>
 <body>
-    <div class="header1"><h1>Portofolioum</h1></div>
+    <div class="card"><div class="header1"><h1>Portofolioum</h1></div>
         <p>hallo there boyz its tiem fo waahggh nevagongivuap.</p>
+    <img class="photo" src="https://github.com/Kippykip/W9X-Wallpapers/blob/main/2X%20Tiles%20-%20PNG/Forest.png?raw=true" alt="awooga">
+    <h1>ayo its da boi wazzup</h1>
+    <div class="card"><ul>
+        <li class="button">
+            <a class="button" href="">buttan 1</a>
+        </li>
+        <li class="button">
+            <a class="button" href="">buttan 2</a>
+        </li>
+        <li class="button">
+            <a href="">buttan 3</a>
+        </li>
+    </ul>
     <h2>Persona data</h2>
         <p><strong>Nombre</strong>: Tito</p>
         <p><strong>Contacta meiru:</strong> <a href=mailto:tito@tito.eu>titomail</a></p>
@@ -80,6 +125,6 @@
                 <h4>Pulador Extraordinário</h4>
                 <p>Did ma jumps u crzy ma boi</p>
             </li>
-        </ul>
+        </ul></div>
 </body>
 </html>
